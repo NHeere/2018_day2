@@ -44,6 +44,24 @@ def test_max_with_plateau():
     exp = [1,2]
     assert exp == out
 
+def test_max_with_saddel():
+    inp = [1, 2, 2, 3, 1]
+    out = find_maxima(inp)
+    exp = [3]
+    assert exp == out
+
+def test_max_with_reverse_saddel():
+    inp = [1, 3, 2, 2, 1]
+    out = find_maxima(inp)
+    exp = [1]
+    assert exp == out
+
+def test_max_with_valley():
+    inp = [3, 2, 2, 3]
+    out = find_maxima(inp)
+    exp = [0,3]
+    assert exp == out
+
 # additional tests for
 # - max on both borders
 #   x = [4, 2, 1, 3, 1, 2]
