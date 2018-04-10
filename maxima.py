@@ -18,6 +18,9 @@ def find_maxima(x):
         if i == len(x) - 1:
             if x[i-1] < x[i]:
                 idx.append(i)
+        elif i == 0:
+            if x[i+1] < x[i]:
+                idx.append(i)
         # `i` is a local maximum if the signal decreases before and after it
         elif x[i-1] < x[i] and x[i+1] < x[i]:
             idx.append(i)
